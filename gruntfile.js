@@ -15,13 +15,9 @@ module.exports = function(grunt){
 			uglify: {
 				compile: {
 					options: {
-						//sourceMap: true,
 						banner: '<%= meta.banners %>',
-						mangle: {
-							reserved: ['jQuery']
-						},
-						sourceMap: false, 
-						compress: false
+						sourceMap: true,
+						compress: true
 					},
 					files: [
 						{
@@ -131,7 +127,8 @@ module.exports = function(grunt){
 				files: {
 					options: optionsPug,
 					files: {
-						"index.html": ['src/pug/index.pug']
+						"index.html": ['src/pug/index.pug'],
+						"assets/templates/comingsoon/index.html": ['src/pug/index.pug']
 					}
 				}
 			},

@@ -14,7 +14,7 @@ body {
 	background-position: 50% 50%;
 	background-repeat: no-repeat;
 	background-size: cover;
-	background-image: url('https://art-garage.github.io/comingsoon/assets/templates/comingsoon/images/1.jpg');
+	background-image: url('/assets/templates/comingsoon/images/1.jpg');
 	overflow: hidden;
 	.page {
 		height: 100vh;
@@ -82,7 +82,8 @@ body {
 				.clock {
 					z-index: 2;
 				}
-				&:before {
+				&:before,
+				&:after {
 					display: block;
 					position: absolute;
 					content: " ";
@@ -92,12 +93,20 @@ body {
 					left: 0px;
 					right: 0px;
 					bottom: 0px;
-					z-index: 0;
-					opacity: 0.5;
 					background-position: 50% 50%;
-					background-size: 70% 70%;
 					background-repeat: no-repeat;
+				}
+				&:before {
+					opacity: 0.8;
+					background-size: 70% 70%;
 					background-image: data-uri('inc/img/clock-bg.png');
+					background-color: #000;
+					z-index: 1;
+				}
+				&:after {
+					background-size: 100% 100%;
+					background-image: data-uri('inc/img/glass.png');
+					z-index: 3;
 				}
 			}
 		}
@@ -121,6 +130,7 @@ body {
 		}
 		.plugin {
 			width: 300px;
+			padding-bottom: 130px;
 			&-wrapper {
 				margin-left: auto;
 				margin-right: auto;
@@ -128,7 +138,6 @@ body {
 		}
 	}
 	@media(max-width: 379px){
-		word-break: break-all;
 		.plugin {
 			width: 200px;
 		}
