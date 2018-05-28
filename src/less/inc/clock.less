@@ -1,0 +1,47 @@
+.clock {
+	position: relative;
+	height: 0px;
+	width: 100%;
+	padding-bottom: 100%;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-image: data-uri('inc/img/clock.png');
+	filter: invert(100%);
+	line-height: 1;
+	.hour,
+	.minute,
+	.second {
+		transform-origin: 50% 50%;
+		position: absolute;
+		height: 100%;
+		left: 50%;
+	}
+	.hour,
+	.minute {
+		margin-left: -10px;
+		width: 20px;
+		background-position: 50% 50%;
+		background-repeat: no-repeat;
+		background-size: contain;
+	}
+	.hour {
+		background-image: data-uri('inc/img/hour.png');
+	}
+	.minute {
+		background-image: data-uri('inc/img/minute.png');
+	}
+	.second {
+		width: 0px;
+		&:before {
+			content: " ";
+			display: block;
+			position: relative;
+			border-left: 1px solid #000;
+			margin-bottom: 30%;
+			margin-top: 0px;
+			height: 70%;
+		}
+	}
+	
+}

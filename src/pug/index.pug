@@ -1,0 +1,15 @@
+doctype html
+html(prefix="og: http://ogp.me/ns#" lang="ru")
+	include inc/head
+	body.load
+		.preloader
+			img(src="/assets/templates/comingsoon/images/loader.png" alt="АРТ-ГАРАЖ")
+		.page
+			.container
+				include inc/content
+				include inc/clock
+		script
+			="\n"
+			include ../../bower_components/yepnope/dist/yepnope-2.0.0.min.js
+		script
+			include inc/javascript.js
