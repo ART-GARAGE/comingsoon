@@ -51,9 +51,6 @@ module.exports = function(grunt){
 					files : {
 						'test/css/main.css' : [
 							'src/less/main.less'
-						],
-						'test/css/normalize.css' : [
-							'bower_components/normalize-css/normalize.css',
 						]
 					},
 					options : {
@@ -79,8 +76,7 @@ module.exports = function(grunt){
 				},
 				css: {
 					files: {
-						'tests/css/main.css' : ['test/css/main.css'],
-						'tests/css/normalize.css' : ['test/css/normalize.css']
+						'tests/css/main.css' : ['test/css/main.css']
 					}
 				},
 			},
@@ -90,7 +86,6 @@ module.exports = function(grunt){
 				},
 				dist: {
 					src: [
-						'tests/css/normalize.css',
 						'tests/css/main.css'
 					],
 					dest: 'assets/templates/comingsoon/css/main.css',

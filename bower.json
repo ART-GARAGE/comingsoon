@@ -15,10 +15,8 @@
 		"tests"
 	],
 	"devDependencies": {
-		"normalize-css": "normalize.css#>=7.0.0",
 		"yepnope": ">=2.0.0",
 		"jquery": "^3.3.1",
-		"jquery.transform.js": "https://github.com/louisremi/jquery.transform.js.git",
-		"jquery.cookie": "https://github.com/carhartl/jquery-cookie.git"
+		"jquery.transform.js": "https://github.com/louisremi/jquery.transform.js.git"
 	}
 }
